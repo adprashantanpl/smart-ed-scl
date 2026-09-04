@@ -1,0 +1,1741 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><style>
+/* =========================
+   SMART EDUCATION SCHOOL
+   BLOGGER DEMO
+========================= */
+
+#smart-school,
+#smart-school *{
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+#smart-school{
+    margin:0;
+    padding:0;
+    background:#f1f5f9;
+    color:#1e293b;
+    min-height:600px;
+}
+
+/* LOGIN */
+
+#ses-login{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:linear-gradient(135deg,#0f172a,#2563eb,#38bdf8);
+}
+
+.ses-login-card{
+    width:100%;
+    max-width:420px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+
+.ses-logo{
+    width:70px;
+    height:70px;
+    margin:0 auto 15px;
+    border-radius:18px;
+    background:#2563eb;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:35px;
+}
+
+.ses-login-card h1{
+    text-align:center;
+    font-size:25px;
+    margin:10px 0;
+}
+
+.ses-subtitle{
+    text-align:center;
+    color:#64748b;
+    margin-bottom:25px;
+}
+
+.ses-group{
+    margin-bottom:16px;
+}
+
+.ses-group label{
+    display:block;
+    font-weight:bold;
+    font-size:14px;
+    margin-bottom:6px;
+}
+
+.ses-group input,
+.ses-group select,
+.ses-group textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #cbd5e1;
+    border-radius:9px;
+    outline:none;
+    background:white;
+}
+
+.ses-group input:focus,
+.ses-group select:focus,
+.ses-group textarea:focus{
+    border-color:#2563eb;
+}
+
+.ses-btn{
+    border:0;
+    padding:12px 17px;
+    border-radius:9px;
+    background:#2563eb;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.ses-btn:hover{
+    background:#1d4ed8;
+}
+
+.ses-full{
+    width:100%;
+}
+
+.ses-demo{
+    margin-top:18px;
+    padding:14px;
+    border-radius:10px;
+    background:#eff6ff;
+    font-size:13px;
+    line-height:1.7;
+}
+
+/* APP */
+
+#ses-app{
+    display:none;
+    min-height:650px;
+}
+
+/* SIDEBAR */
+
+.ses-sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    width:230px;
+    background:#0f172a;
+    color:white;
+    padding:18px 12px;
+    z-index:99999;
+}
+
+.ses-school-name{
+    font-size:19px;
+    font-weight:bold;
+    padding:10px;
+    margin-bottom:20px;
+}
+
+.ses-menu button{
+    display:block;
+    width:100%;
+    border:0;
+    background:transparent;
+    color:#cbd5e1;
+    padding:12px;
+    margin:3px 0;
+    border-radius:8px;
+    text-align:left;
+    cursor:pointer;
+}
+
+.ses-menu button:hover,
+.ses-menu button.ses-active{
+    background:#2563eb;
+    color:white;
+}
+
+/* MAIN */
+
+.ses-main{
+    margin-left:230px;
+    min-height:650px;
+}
+
+.ses-topbar{
+    height:65px;
+    background:white;
+    border-bottom:1px solid #e2e8f0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 25px;
+}
+
+.ses-mobile{
+    display:none;
+    border:0;
+    background:none;
+    font-size:25px;
+    cursor:pointer;
+}
+
+.ses-content{
+    padding:25px;
+}
+
+.ses-page{
+    display:none;
+}
+
+.ses-page.ses-show{
+    display:block;
+}
+
+.ses-title{
+    margin-bottom:20px;
+}
+
+.ses-title h2{
+    margin:0;
+    font-size:27px;
+}
+
+.ses-title p{
+    color:#64748b;
+    margin-top:6px;
+}
+
+/* CARDS */
+
+.ses-cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.ses-card{
+    background:white;
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 3px 12px rgba(0,0,0,.05);
+}
+
+.ses-card-icon{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.ses-card h3{
+    font-size:26px;
+    margin:0;
+}
+
+.ses-card p{
+    color:#64748b;
+    margin-top:5px;
+}
+
+/* GRID */
+
+.ses-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+/* NOTES */
+
+.ses-note{
+    background:white;
+    padding:19px;
+    border-radius:13px;
+    margin-bottom:14px;
+    box-shadow:0 3px 12px rgba(0,0,0,.05);
+}
+
+.ses-note h3{
+    color:#1d4ed8;
+    margin:0 0 8px;
+}
+
+.ses-note-info{
+    color:#64748b;
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+.ses-note-content{
+    line-height:1.7;
+    white-space:pre-wrap;
+}
+
+.ses-date{
+    color:#94a3b8;
+    font-size:12px;
+    margin-top:10px;
+}
+
+.ses-delete{
+    margin-top:12px;
+    border:0;
+    background:#fee2e2;
+    color:#991b1b;
+    padding:8px 11px;
+    border-radius:7px;
+    cursor:pointer;
+}
+
+/* TABLE */
+
+.ses-table-box{
+    background:white;
+    border-radius:14px;
+    overflow:auto;
+}
+
+.ses-table{
+    width:100%;
+    min-width:600px;
+    border-collapse:collapse;
+}
+
+.ses-table th,
+.ses-table td{
+    padding:13px;
+    text-align:left;
+    border-bottom:1px solid #e2e8f0;
+}
+
+.ses-table th{
+    background:#f8fafc;
+}
+
+.ses-badge{
+    background:#dcfce7;
+    color:#166534;
+    padding:5px 9px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+/* UPLOAD */
+
+.ses-upload{
+    background:white;
+    padding:22px;
+    border-radius:14px;
+    margin-bottom:22px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .ses-sidebar{
+        transform:translateX(-100%);
+        transition:.3s;
+    }
+
+    .ses-sidebar.ses-open{
+        transform:translateX(0);
+    }
+
+    .ses-main{
+        margin-left:0;
+    }
+
+    .ses-mobile{
+        display:block;
+    }
+
+    .ses-cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .ses-content{
+        padding:15px;
+    }
+
+    .ses-cards,
+    .ses-grid{
+        grid-template-columns:1fr;
+    }
+
+    .ses-topbar{
+        padding:0 12px;
+    }
+
+    .ses-login-card{
+        padding:23px;
+    }
+}
+</style>
+
+
+<div id="smart-school">
+
+<!-- =========================
+     LOGIN
+========================= -->
+
+<div id="ses-login">
+
+<div class="ses-login-card">
+
+<div class="ses-logo">
+🎓
+</div>
+
+<h1>
+Smart Education School
+</h1>
+
+<div class="ses-subtitle">
+Digital School Management System
+</div>
+
+
+<form id="ses-login-form">
+
+<div class="ses-group">
+
+<label>
+Email
+</label>
+
+<input
+type="email"
+id="ses-email"
+placeholder="Enter email"
+required
+>
+
+</div>
+
+
+<div class="ses-group">
+
+<label>
+Password
+</label>
+
+<input
+type="password"
+id="ses-password"
+placeholder="Enter password"
+required
+>
+
+</div>
+
+
+<div class="ses-group">
+
+<label>
+Login As
+</label>
+
+<select id="ses-role">
+
+<option value="student">
+Student
+</option>
+
+<option value="teacher">
+Teacher
+</option>
+
+</select>
+
+</div>
+
+
+<button
+type="submit"
+class="ses-btn ses-full"
+>
+🔐 Login
+</button>
+
+</form>
+
+
+<div class="ses-demo">
+
+<b>🎯 Demo Accounts</b>
+
+<br><br>
+
+👨‍🎓 <b>Student</b><br>
+
+student@school.com<br>
+
+Password: <b>student123</b>
+
+<br><br>
+
+👨‍🏫 <b>Teacher</b><br>
+
+teacher@school.com<br>
+
+Password: <b>teacher123</b>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     APP
+========================= -->
+
+<div id="ses-app">
+
+
+<!-- SIDEBAR -->
+
+<aside id="ses-sidebar" class="ses-sidebar">
+
+<div class="ses-school-name">
+🎓 Smart Education
+</div>
+
+<div class="ses-menu">
+
+<button onclick="sesOpen('ses-dashboard')">
+🏠 Dashboard
+</button>
+
+<button id="ses-notes-menu"
+onclick="sesOpen('ses-notes')">
+📚 My Notes
+</button>
+
+<button id="ses-students-menu"
+onclick="sesOpen('ses-students')">
+👨‍🎓 Students
+</button>
+
+<button id="ses-upload-menu"
+onclick="sesOpen('ses-upload')">
+📝 Upload Notes
+</button>
+
+<button onclick="sesOpen('ses-notices')">
+📢 Notices
+</button>
+
+<button onclick="sesOpen('ses-profile')">
+👤 My Profile
+</button>
+
+<button onclick="sesLogout()">
+🚪 Logout
+</button>
+
+</div>
+
+</aside>
+
+
+<!-- MAIN -->
+
+<main class="ses-main">
+
+
+<header class="ses-topbar">
+
+<button
+class="ses-mobile"
+onclick="sesToggle()">
+☰
+</button>
+
+<strong>
+Smart Education School
+</strong>
+
+<span id="ses-user-info">
+User
+</span>
+
+</header>
+
+
+<div class="ses-content">
+
+
+<!-- DASHBOARD -->
+
+<section
+id="ses-dashboard"
+class="ses-page ses-show">
+
+<div class="ses-title">
+
+<h2 id="ses-dashboard-title">
+Dashboard
+</h2>
+
+<p id="ses-welcome">
+Welcome to Smart Education School.
+</p>
+
+</div>
+
+
+<div class="ses-cards">
+
+
+<div class="ses-card">
+
+<div class="ses-card-icon">
+👨‍🎓
+</div>
+
+<h3>
+250
+</h3>
+
+<p>
+Students
+</p>
+
+</div>
+
+
+<div class="ses-card">
+
+<div class="ses-card-icon">
+👨‍🏫
+</div>
+
+<h3>
+25
+</h3>
+
+<p>
+Teachers
+</p>
+
+</div>
+
+
+<div class="ses-card">
+
+<div class="ses-card-icon">
+📚
+</div>
+
+<h3>
+12
+</h3>
+
+<p>
+Classes
+</p>
+
+</div>
+
+
+<div class="ses-card">
+
+<div class="ses-card-icon">
+📝
+</div>
+
+<h3 id="ses-note-count">
+3
+</h3>
+
+<p>
+Study Notes
+</p>
+
+</div>
+
+</div>
+
+
+<div class="ses-grid">
+
+<div class="ses-card">
+
+<h3>
+📢 Latest Notice
+</h3>
+
+<br>
+
+<b>
+Annual Examination
+</b>
+
+<br><br>
+
+<p>
+Annual examination starts from
+October 15, 2026.
+</p>
+
+</div>
+
+
+<div class="ses-card">
+
+<h3>
+📅 Today's Schedule
+</h3>
+
+<br>
+
+<p>
+09:00 AM — Mathematics
+</p>
+
+<br>
+
+<p>
+10:00 AM — Science
+</p>
+
+<br>
+
+<p>
+11:30 AM — English
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STUDENT NOTES -->
+
+<section
+id="ses-notes"
+class="ses-page">
+
+<div class="ses-title">
+
+<h2>
+📚 My Notes
+</h2>
+
+<p>
+Notes published by your teachers.
+</p>
+
+</div>
+
+<div id="ses-student-notes">
+</div>
+
+</section>
+
+
+<!-- STUDENTS -->
+
+<section
+id="ses-students"
+class="ses-page">
+
+<div class="ses-title">
+
+<h2>
+👨‍🎓 Students
+</h2>
+
+<p>
+Registered students.
+</p>
+
+</div>
+
+
+<div class="ses-table-box">
+
+<table class="ses-table">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Class</th>
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>ST001</td>
+<td>Rahul Sharma</td>
+<td>student@school.com</td>
+<td>Grade 10</td>
+
+<td>
+<span class="ses-badge">
+Active
+</span>
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>ST002</td>
+<td>Anita Rai</td>
+<td>anita@school.com</td>
+<td>Grade 10</td>
+
+<td>
+<span class="ses-badge">
+Active
+</span>
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>ST003</td>
+<td>Rohan Thapa</td>
+<td>rohan@school.com</td>
+<td>Grade 9</td>
+
+<td>
+<span class="ses-badge">
+Active
+</span>
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>ST004</td>
+<td>Sita Sharma</td>
+<td>sita@school.com</td>
+<td>Grade 9</td>
+
+<td>
+<span class="ses-badge">
+Active
+</span>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- UPLOAD -->
+
+<section
+id="ses-upload"
+class="ses-page">
+
+<div class="ses-title">
+
+<h2>
+📝 Upload Notes
+</h2>
+
+<p>
+Publish study materials for students.
+</p>
+
+</div>
+
+
+<div class="ses-upload">
+
+<form id="ses-note-form">
+
+
+<div class="ses-group">
+
+<label>
+Subject
+</label>
+
+<select id="ses-subject" required>
+
+<option value="">
+Select Subject
+</option>
+
+<option>
+Mathematics
+</option>
+
+<option>
+Science
+</option>
+
+<option>
+English
+</option>
+
+<option>
+Computer Science
+</option>
+
+<option>
+Social Studies
+</option>
+
+</select>
+
+</div>
+
+
+<div class="ses-group">
+
+<label>
+Note Title
+</label>
+
+<input
+type="text"
+id="ses-title"
+placeholder="Example: Chapter 5 - Algebra"
+required
+>
+
+</div>
+
+
+<div class="ses-group">
+
+<label>
+Note Content
+</label>
+
+<textarea
+id="ses-content"
+rows="8"
+placeholder="Write notes here..."
+required></textarea>
+
+</div>
+
+
+<button
+class="ses-btn"
+type="submit">
+
+📤 Publish Note
+
+</button>
+
+</form>
+
+</div>
+
+
+<h3>
+Recently Published
+</h3>
+
+<br>
+
+<div id="ses-teacher-notes">
+</div>
+
+</section>
+
+
+<!-- NOTICES -->
+
+<section
+id="ses-notices"
+class="ses-page">
+
+<div class="ses-title">
+
+<h2>
+📢 School Notices
+</h2>
+
+<p>
+Important announcements.
+</p>
+
+</div>
+
+
+<div class="ses-note">
+
+<h3>
+📚 Annual Examination
+</h3>
+
+<p>
+Annual examination starts from
+October 15, 2026.
+</p>
+
+<div class="ses-date">
+Posted by Administration
+</div>
+
+</div>
+
+
+<div class="ses-note">
+
+<h3>
+👨‍👩‍👧 Parent-Teacher Meeting
+</h3>
+
+<p>
+Parent-teacher meeting will be held
+on September 20, 2026.
+</p>
+
+<div class="ses-date">
+Posted by Administration
+</div>
+
+</div>
+
+
+<div class="ses-note">
+
+<h3>
+🏆 Sports Day
+</h3>
+
+<p>
+Annual sports day will be organized
+next month.
+</p>
+
+<div class="ses-date">
+Posted by Administration
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROFILE -->
+
+<section
+id="ses-profile"
+class="ses-page">
+
+<div class="ses-title">
+
+<h2>
+👤 My Profile
+</h2>
+
+<p>
+Account information.
+</p>
+
+</div>
+
+
+<div class="ses-card">
+
+<p>
+<b>Name:</b>
+<span id="ses-profile-name"></span>
+</p>
+
+<br>
+
+<p>
+<b>Email:</b>
+<span id="ses-profile-email"></span>
+</p>
+
+<br>
+
+<p>
+<b>Role:</b>
+<span id="ses-profile-role"></span>
+</p>
+
+<br>
+
+<p>
+<b>School:</b>
+Smart Education School
+</p>
+
+</div>
+
+</section>
+
+
+</div>
+
+</main>
+
+</div>
+
+</div>
+
+
+<script>
+(function(){
+
+/* =========================
+   USERS
+========================= */
+
+var sesUsers = {
+
+student:{
+email:"student@school.com",
+password:"student123",
+name:"Rahul Sharma",
+role:"student"
+},
+
+teacher:{
+email:"teacher@school.com",
+password:"teacher123",
+name:"Mr. Sharma",
+role:"teacher"
+}
+
+};
+
+
+/* =========================
+   DEFAULT NOTES
+========================= */
+
+var sesDefaultNotes = [
+
+{
+subject:"Mathematics",
+title:"Chapter 5 - Algebra",
+content:"Algebra uses letters and symbols to represent numbers.\n\nStudy linear equations and quadratic equations carefully.",
+teacher:"Mr. Sharma",
+date:"04 September 2026"
+},
+
+{
+subject:"Science",
+title:"Introduction to Physics",
+content:"Physics is the study of matter, energy, motion and interactions.\n\nRead carefully about force, motion and Newton's laws.",
+teacher:"Ms. Rai",
+date:"03 September 2026"
+},
+
+{
+subject:"English",
+title:"Essay Writing",
+content:"A good essay should have an introduction, body paragraphs and a conclusion.\n\nAlways organize your ideas clearly.",
+teacher:"Mr. Sharma",
+date:"02 September 2026"
+}
+
+];
+
+
+var sesCurrentUser=null;
+
+
+/* =========================
+   STORAGE
+========================= */
+
+function sesGetNotes(){
+
+var saved=
+localStorage.getItem("smartEducationNotes");
+
+if(!saved){
+
+localStorage.setItem(
+"smartEducationNotes",
+JSON.stringify(sesDefaultNotes)
+);
+
+return sesDefaultNotes;
+}
+
+try{
+
+return JSON.parse(saved);
+
+}catch(e){
+
+return sesDefaultNotes;
+
+}
+
+}
+
+
+function sesSaveNotes(notes){
+
+localStorage.setItem(
+"smartEducationNotes",
+JSON.stringify(notes)
+);
+
+}
+
+
+/* =========================
+   HTML ESCAPE
+========================= */
+
+function sesEscape(text){
+
+return String(text)
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
+
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+document
+.getElementById("ses-login-form")
+.addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+var email=
+document
+.getElementById("ses-email")
+.value
+.trim();
+
+var password=
+document
+.getElementById("ses-password")
+.value;
+
+var role=
+document
+.getElementById("ses-role")
+.value;
+
+var user=sesUsers[role];
+
+
+if(
+user &&
+email===user.email &&
+password===user.password
+){
+
+sesCurrentUser=user;
+
+document
+.getElementById("ses-login")
+.style.display="none";
+
+document
+.getElementById("ses-app")
+.style.display="block";
+
+
+document
+.getElementById("ses-user-info")
+.textContent=
+"👤 "+user.name;
+
+
+document
+.getElementById("ses-dashboard-title")
+.textContent=
+user.role==="student"
+?
+"Student Dashboard"
+:
+"Teacher Dashboard";
+
+
+document
+.getElementById("ses-welcome")
+.textContent=
+"Welcome, "+user.name+"!";
+
+
+document
+.getElementById("ses-profile-name")
+.textContent=user.name;
+
+document
+.getElementById("ses-profile-email")
+.textContent=user.email;
+
+document
+.getElementById("ses-profile-role")
+.textContent=
+user.role==="student"
+?
+"Student"
+:
+"Teacher";
+
+
+/* MENU */
+
+document
+.getElementById("ses-notes-menu")
+.style.display=
+user.role==="student"
+?
+"block"
+:
+"none";
+
+
+document
+.getElementById("ses-students-menu")
+.style.display=
+user.role==="teacher"
+?
+"block"
+:
+"none";
+
+
+document
+.getElementById("ses-upload-menu")
+.style.display=
+user.role==="teacher"
+?
+"block"
+:
+"none";
+
+
+sesLoadStudentNotes();
+
+sesLoadTeacherNotes();
+
+sesUpdateCount();
+
+sesOpen("ses-dashboard");
+
+
+}else{
+
+alert(
+"❌ Invalid login details."
+);
+
+}
+
+});
+
+
+/* =========================
+   OPEN PAGE
+========================= */
+
+window.sesOpen=function(page){
+
+var pages=
+document.querySelectorAll(
+"#smart-school .ses-page"
+);
+
+for(
+var i=0;
+i<pages.length;
+i++
+){
+
+pages[i]
+.classList
+.remove("ses-show");
+
+}
+
+
+var selected=
+document.getElementById(page);
+
+if(selected){
+
+selected
+.classList
+.add("ses-show");
+
+}
+
+
+document
+.getElementById("ses-sidebar")
+.classList
+.remove("ses-open");
+
+};
+
+
+/* =========================
+   STUDENT NOTES
+========================= */
+
+function sesLoadStudentNotes(){
+
+var box=
+document
+.getElementById("ses-student-notes");
+
+var notes=sesGetNotes();
+
+box.innerHTML="";
+
+
+if(notes.length===0){
+
+box.innerHTML=
+'<div class="ses-note">'+
+'<h3>📭 No Notes</h3>'+
+'<p>Your teachers have not uploaded notes yet.</p>'+
+'</div>';
+
+return;
+
+}
+
+
+for(
+var i=0;
+i<notes.length;
+i++
+){
+
+var n=notes[i];
+
+box.innerHTML+=
+
+'<div class="ses-note">'+
+
+'<h3>📘 '+
+sesEscape(n.title)+
+'</h3>'+
+
+'<div class="ses-note-info">'+
+'Subject: <b>'+
+sesEscape(n.subject)+
+'</b><br>'+
+'👨‍🏫 Teacher: '+
+sesEscape(n.teacher)+
+'</div>'+
+
+'<div class="ses-note-content">'+
+sesEscape(n.content)+
+'</div>'+
+
+'<div class="ses-date">'+
+'Published: '+
+sesEscape(n.date)+
+'</div>'+
+
+'</div>';
+
+}
+
+}
+
+
+/* =========================
+   TEACHER NOTES
+========================= */
+
+function sesLoadTeacherNotes(){
+
+var box=
+document
+.getElementById("ses-teacher-notes");
+
+var notes=sesGetNotes();
+
+box.innerHTML="";
+
+
+for(
+var i=0;
+i<notes.length;
+i++
+){
+
+var n=notes[i];
+
+box.innerHTML+=
+
+'<div class="ses-note">'+
+
+'<h3>📘 '+
+sesEscape(n.title)+
+'</h3>'+
+
+'<div class="ses-note-info">'+
+'Subject: '+
+sesEscape(n.subject)+
+'</div>'+
+
+'<div class="ses-note-content">'+
+sesEscape(n.content)+
+'</div>'+
+
+'<div class="ses-date">'+
+'Published: '+
+sesEscape(n.date)+
+'</div>'+
+
+'<button class="ses-delete" '+
+'onclick="sesDeleteNote('+i+')">'+
+'🗑️ Delete Note'+
+'</button>'+
+
+'</div>';
+
+}
+
+}
+
+
+/* =========================
+   PUBLISH NOTE
+========================= */
+
+document
+.getElementById("ses-note-form")
+.addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+
+var subject=
+document
+.getElementById("ses-subject")
+.value;
+
+var title=
+document
+.getElementById("ses-title")
+.value
+.trim();
+
+var content=
+document
+.getElementById("ses-content")
+.value
+.trim();
+
+
+if(
+!subject ||
+!title ||
+!content
+){
+
+alert(
+"Please fill all fields."
+);
+
+return;
+
+}
+
+
+var notes=sesGetNotes();
+
+
+var date=
+new Date()
+.toLocaleDateString(
+"en-US",
+{
+day:"2-digit",
+month:"long",
+year:"numeric"
+}
+);
+
+
+notes.unshift({
+
+subject:subject,
+
+title:title,
+
+content:content,
+
+teacher:
+sesCurrentUser
+?
+sesCurrentUser.name
+:
+"Teacher",
+
+date:date
+
+});
+
+
+sesSaveNotes(notes);
+
+
+document
+.getElementById("ses-note-form")
+.reset();
+
+
+sesLoadStudentNotes();
+
+sesLoadTeacherNotes();
+
+sesUpdateCount();
+
+
+alert(
+"✅ Note published successfully!"
+);
+
+});
+
+
+/* =========================
+   DELETE
+========================= */
+
+window.sesDeleteNote=function(index){
+
+if(
+!confirm(
+"Delete this note?"
+)
+){
+
+return;
+
+}
+
+
+var notes=sesGetNotes();
+
+notes.splice(index,1);
+
+sesSaveNotes(notes);
+
+sesLoadStudentNotes();
+
+sesLoadTeacherNotes();
+
+sesUpdateCount();
+
+};
+
+
+/* =========================
+   COUNT
+========================= */
+
+function sesUpdateCount(){
+
+document
+.getElementById("ses-note-count")
+.textContent=
+sesGetNotes().length;
+
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+window.sesToggle=function(){
+
+document
+.getElementById("ses-sidebar")
+.classList
+.toggle("ses-open");
+
+};
+
+
+/* =========================
+   LOGOUT
+========================= */
+
+window.sesLogout=function(){
+
+sesCurrentUser=null;
+
+document
+.getElementById("ses-app")
+.style.display="none";
+
+document
+.getElementById("ses-login")
+.style.display="flex";
+
+document
+.getElementById("ses-login-form")
+.reset();
+
+};
+
+
+/* INITIALIZE */
+
+sesUpdateCount();
+
+})();
+</script>
